@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+<!--    <constant name="struts.enable.DynamicMethodInvocation" value="true" />-->
+    <package name="myPackage" extends="struts-default">
+        <action name="first">
+            <!-- 定义处理成功后的映射页面 -->
+            <result>/StrutsJSP/first.jsp</result>
+        </action>
+        <action name="studentAction" class="com.myCode.actionCode.StudentAction">
+            <result name="add">/StrutsJSP/stu_add.jsp</result>
+            <result name="update">/StrutsJSP/stu_update.jsp</result>
+
+        </action>
+    </package>
+</struts>
